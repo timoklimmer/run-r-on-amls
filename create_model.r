@@ -1,3 +1,6 @@
+# IMPORTANT: set the working directory to the location of this script
+#setwd("<add your script directory here>")
+
 library(jsonlite)
 
 ### Get and Analyze Data
@@ -21,13 +24,13 @@ abline(model, col="red")
 # note: we'll let the score.py script call this function when the prediction service is
 #       initialized
 init <- function() {
-  # load required libraries
-  library(jsonlite)
 }
 
 # define a run() function for AMLS
 # note: we'll let the score.py script call this function when the prediction service is used
 run <- function(inputJsonString) {
+  # load required libraries
+  library(jsonlite)
   # get input
   inputJson <- fromJSON(inputJsonString)
   x <- inputJson$x
