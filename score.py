@@ -8,6 +8,8 @@ def init():
     # load model
     model_path = Model.get_model_path('model.RData')
     robjects.r("load('{model_path}')".format(model_path=model_path))
+    # run init() function in R (if exists)
+    robjects.r("if (exists('init', mode='function')) { init() }")
 
 def run(input_json_string):
     try:

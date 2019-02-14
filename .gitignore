@@ -1,1 +1,5 @@
+.vscode
+.ipynb_checkpoints
+aml_config
+.Rhistory
 *.pem
