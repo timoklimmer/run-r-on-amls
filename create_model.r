@@ -37,7 +37,7 @@ run <- function(inputJsonString) {
   # apply model
   y <- as.numeric(predict(model, data.frame(x = x)))
   # return result
-  outputJsonString <- paste0('{"x": ', as.character(y), '}')
+  outputJsonString <- paste0('{"y": ', as.character(y), '}')
   return(outputJsonString)
 }
 
