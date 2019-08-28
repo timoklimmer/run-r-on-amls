@@ -13,7 +13,7 @@ $rootCA = New-SelfSignedCertificate @params
 
 # create server certificate signed by root above
 $params = @{
-  DnsName = "<add your own here, eg. xxx.westeurope.cloudapp.azure.com>"
+  DnsName = "<add your own here, eg. xxxx.westeurope.azurecontainer.io"
   Signer = $rootCA
   KeyLength = 2048
   KeyAlgorithm = 'RSA'
@@ -43,7 +43,7 @@ Import-Certificate -CertStoreLocation 'Cert:\LocalMachine\Root' -FilePath "C:\ce
 Export-PfxCertificate -Cert $serverCert -FilePath 'C:\certs\key_for_amls.pfx' -Password (ConvertTo-SecureString -AsPlainText 'securepw' -Force)
 Export-Certificate -Cert $serverCert -FilePath "C:\certs\certificate_for_amls.crt"
 
-# --- BASH session
+# --- now open a BASH shell by running the bash command in a cmd window
 
 # extract server private key from .pfx to convert .crt to .pem
 # enter bash session from cmd as admin and cd to directory containing key_for_amls.pfx etc.
