@@ -11,7 +11,8 @@ dependencies:
 - python=3.6.2
 
 - pip:
-  - azureml-defaults
+  - azureml-defaults==1.0.60.*
+  - azureml-monitoring
 - rpy2
 - mro-base
 - r-jsonlite
