@@ -1,6 +1,7 @@
 # Run R scoring scripts on Azure Machine Learning Services
 
-**UPDATE: The official AzureML SDK for R is in public preview now. See [here](https://github.com/Azure/azureml-sdk-for-r) for more details.**
+>**DEPRECATION WARNING**: The official AzureML SDK for R has meanwhile become available, so the code included in this repo might be obsolete for your case.
+> See [here](https://github.com/Azure/azureml-sdk-for-r) for more details on the new R SDK.
 
 This sample shows how to operationalize R models in Azure Machine Learning Services (AMLS).
 
